@@ -23,3 +23,8 @@ F:\Рабочий стол\WcfPrototype\WcfServerSide\WcfHost1\bin\Debug\WcfServ
 F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\bin\Debug\WcfHost1.exe.config
 F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\obj\Debug\WcfHost1.exe
 F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\obj\Debug\WcfHost1.pdb
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\bin\Debug\WcfHost1.exe
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\bin\Debug\WcfHost1.pdb
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\bin\Debug\WcfService1.dll
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\bin\Debug\WcfService1.pdb
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfHost1\obj\Debug\WcfHost1.csprojResolveAssemblyReference.cache

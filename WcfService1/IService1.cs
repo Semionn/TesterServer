@@ -43,6 +43,9 @@ namespace WcfService1
         private DateTime timeBegin = DateTime.Now, timeEnd;
         private int lastTask = 0;
 
+        public int markAccurate = 0;
+        public int mark = 0;
+
         public bool AnswerRight(int i)
         {
             if (i < 0 || i > answers.Count)
@@ -98,6 +101,19 @@ namespace WcfService1
             get { return lastTask; }
             set { lastTask = value; }
         }
+
+        public int GetRightAnswCount()
+        {
+            return Test.Tasks.Where((a, i) => a.RightAnswer == Answers[i]).ToList().Count;
+        }
+
+        public void GetMark()
+        {
+            for (int i = 0; i < Answers.Count; i++)
+            {
+
+            }
+        }
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
@@ -128,6 +144,9 @@ namespace WcfService1
     {
         private string name = "User";
         public string passwordHash = "81DC9BDB52D04DC20036DBD8313ED055";
+
+        private List<TestPassage> completedTests;
+        public double knowledge = 0.5;
 
         [DataMember]
         public string Name
@@ -208,7 +227,7 @@ namespace WcfService1
         private string text = "";
         private List<string> answers = new List<string>();
         private int rightAnswer = 0;
-        private double difficult = 1;
+        private double difficult = 0;
 
         [DataMember]
         public string Text

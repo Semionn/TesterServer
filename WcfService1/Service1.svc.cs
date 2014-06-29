@@ -17,8 +17,38 @@ namespace WcfService1
     {
         public Service1()
         {
-            students = XMLWork.ReadXMLUsers("students.xml");
+
             tests = XMLWork.ReadXMLTestTheme();
+
+            tests[0].Tests[0].Tasks = new List<Task>();
+            for (int i = 0; i < 50; i++)
+            {
+                tests[0].Tests[0].Tasks.Add(new Task() 
+                { 
+                    Answers = new List<string>(){"1","2","3","4"},
+                    Difficult = 0.25+GaussDistr()/2,
+                    RightAnswer = (int)(rnd()*4),
+                    Text = "none"
+                });
+            }
+
+            //students = XMLWork.ReadXMLUsers("students.xml");
+            students = new List<User>();
+            for (int i = 0; i < 50; i++)
+            {
+                students.Add(new User() { Name = "Unknown_" + i.ToString() });
+            } 
+            SetStudentKnowledge();
+
+            foreach (User user in students)
+            {
+                testPassage.Add(PassTest(user, tests[0].Tests[0]));
+            }
+
+            irt = new IRTTable(testPassage);
+            PrintIntoFileExcel(irt);
+            PrintPredictFileExcel(irt);
+
         }
         
 
@@ -84,7 +114,7 @@ namespace WcfService1
             if (testPassage.Count >= 2)
             {
                 irt = new IRTTable(testPassage);
-                PrintIntoFile(irt);
+                //PrintIntoFile(irt);
             }
         }
 
@@ -95,22 +125,22 @@ namespace WcfService1
             string s = "№  ";
             for (int i = 0; i < irt.taskCount; i++)
             {
-                s += "x" + i.ToString()+"  ";
+                s += "x" + i.ToString() + "  ";
             }
             s += "Teta";
             sw.WriteLine(s);
 
             for (int i = 0; i < testPassage.Count; i++)
             {
-                s = i.ToString()+"   ";
+                s = string.Format("{0,2} ", i);
                 for (int j = 0; j < irt.taskCount; j++)
                 {
                     s += irt.table[i][j].ToString() + "   ";
                 }
                 s += irt.table[i].p.ToString() + " ";
                 s += irt.table[i].q.ToString() + " ";
-                s += irt.table[i].pq.ToString() + " ";
-                s += irt.table[i].teta.ToString() + " ";
+                s += string.Format("{0:f2} ", irt.table[i].pq);
+                s += string.Format("{0:f2} ", irt.table[i].teta) + " ";
                 sw.WriteLine(s);
             }
             s = "w  ";
@@ -128,11 +158,168 @@ namespace WcfService1
             s = "b  ";
             for (int i = 0; i < irt.taskCount; i++)
             {
-                s += string.Format("{0:f1} ",irt.betaList[i]);
-            } 
+                s += string.Format("{0:f1} ", irt.betaList[i]);
+            }
             sw.WriteLine(s);
 
             sw.Close();
+        }
+        public void PrintIntoFileExcel(IRTTable irt)
+        {
+            StreamWriter sw = new StreamWriter("irt.csv");
+
+            string s = "№;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += "x" + i.ToString() + ";";
+            }
+            s += "Teta";
+            sw.WriteLine(s);
+
+            for (int i = 0; i < testPassage.Count; i++)
+            {
+                s = string.Format("{0};", i);
+                for (int j = 0; j < irt.taskCount; j++)
+                {
+                    s += irt.table[i][j].ToString() + ";";
+                }
+                s += irt.table[i].p.ToString() + ";";
+                s += irt.table[i].q.ToString() + ";";
+                s += string.Format("{0:f2};", irt.table[i].pq);
+                s += string.Format("{0:f2};", irt.table[i].teta) + ";";
+                sw.WriteLine(s);
+            }
+            s = "w;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.wList[i]);
+            }
+            sw.WriteLine(s);
+            s = "p;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.pList[i]);
+            }
+            sw.WriteLine(s);
+            s = "b;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.betaList[i]);
+            }
+            sw.WriteLine(s);
+
+            sw.Close();
+        }
+
+        public void PrintPredictFileExcel(IRTTable irt)
+        {
+            StreamWriter sw = new StreamWriter("irt2.csv");
+
+            string s = "№;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += "x" + i.ToString() + ";";
+            }
+            s += "Teta";
+            sw.WriteLine(s);
+
+            for (int i = 0; i < testPassage.Count; i++)
+            {
+                s = string.Format("{0};", i);
+                for (int j = 0; j < irt.taskCount; j++)
+                {
+                    s += string.Format("{0};", irt.predictTable[i][j]);
+                }
+                s += irt.table[i].p.ToString() + ";";
+                s += irt.table[i].q.ToString() + ";";
+                s += string.Format("{0:f2};", irt.table[i].pq);
+                s += string.Format("{0:f2};", irt.table[i].teta) + ";";
+                sw.WriteLine(s);
+            }
+            s = "w;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.wList[i]);
+            }
+            sw.WriteLine(s);
+            s = "p;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.pList[i]);
+            }
+            sw.WriteLine(s);
+            s = "b;";
+            for (int i = 0; i < irt.taskCount; i++)
+            {
+                s += string.Format("{0:f1};", irt.betaList[i]);
+            }
+            sw.WriteLine(s);
+
+            sw.Close();
+        }
+
+        public void SetStudentKnowledge()
+        {
+            List<double> l = new List<double>();
+            for (int i = 0; i < students.Count; i++)
+            {
+                l.Add(GaussDistr());
+            }
+            l.Sort();
+            for (int i = 0; i < students.Count; i++)
+            {
+                students[i].knowledge = l[i];
+            }
+        }
+
+        public TestPassage PassTest(User user, Test test)
+        {
+            var result = new TestPassage();
+            result.User = user;
+            result.Test = test;
+            result.Answers = new List<int>();
+            for (int i = 0; i < test.Tasks.Count; i++)
+            {
+                int right = test.Tasks[i].RightAnswer;
+                if (rnd() < user.knowledge * (1 - test.Tasks[i].Difficult * test.Tasks[i].Difficult))
+                {
+                    result.Answers.Add(right);
+                }
+                else
+                {
+                    if (right > 0)
+                        result.Answers.Add(right - 1);
+                    else
+                        result.Answers.Add(right + 1);
+                }
+            }
+            return result;
+        }
+
+        private static double GaussDistr()
+        {
+            double v1, v2, s;
+            while (true)
+            {
+                v1 = 2.0 * rnd() - 1.0;
+                v2 = 2.0 * rnd() - 1.0;
+                s = v1 * v1 + v2 * v2;
+                if ((s <= 1.0) && (s > 0.0))
+                {
+                    double r = 0.5 + (v2 * Math.Sqrt((-2.0) * Math.Log(s) / s)) / 5;
+                    if (r < 0)
+                        r = 0;
+                    if (r > 1)
+                        r = 1;
+                    return r;
+                }
+            }
+        }
+
+        static Random rand = new Random();
+        private static double rnd()
+        {
+            return rand.NextDouble();
         }
 
         public List<User> GetAllUsers()

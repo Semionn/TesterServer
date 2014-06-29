@@ -69,7 +69,17 @@ namespace WcfHost1
                                     });
 
             WriteXMLTestTheme(test);*/
-
+            List<double> l = new List<double>();
+            for (int i = 0; i < 50; i++)
+            {
+                l.Add(GaussDistr());
+            }
+            l.Sort();
+            foreach (var item in l)
+            {
+                Console.WriteLine(item);
+            }
+            
             using (var host = new ServiceHost(typeof (Service1)))
             {
                 host.Open();
@@ -92,6 +102,51 @@ namespace WcfHost1
             zn = Math.Sqrt(zn);
             double res = ch/zn;
             return res;
+        }
+
+        private static double GaussDistr()
+        {
+            double v1, v2, s;
+            while (true)
+            {
+                v1 = 2.0 * rnd() - 1.0;
+                v2 = 2.0 * rnd() - 1.0;
+                s = v1 * v1 + v2 * v2;
+                if ((s <= 1.0) && (s > 0.0))
+                {
+                    double r = 0.5+(v2 * Math.Sqrt((-2.0) * Math.Log(s) / s))/5;
+                    if (r < 0)
+                        r = 0;
+                    if (r > 1)
+                        r = 1;
+                    return r;
+                }
+            }
+        }
+
+        private static int rand_puass(double mu)
+        {
+            double time;
+            short count;
+            if (mu <= 0.0) 
+                return (0);
+            time = 0.0;
+            count = 0;
+            while (true)
+            {
+                time -= Math.Log(rnd()) / mu;
+                if (time < 1.0)
+                    count++;
+                else
+                    break;
+            }
+            return (count);
+        }
+
+        static Random rand = new Random();
+        private static double rnd()
+        {
+            return rand.NextDouble();
         }
 
     }

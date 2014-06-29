@@ -143,6 +143,7 @@ namespace WcfService1
                 sum += val[j];
                 table.rList[j] += val[j];
             }
+            CalcKoeff();
         }
 
         public void CalcKoeff()

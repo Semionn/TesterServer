@@ -8,3 +8,8 @@ F:\Рабочий стол\WcfPrototype\WcfServerSide\WcfService1\bin\WcfService
 F:\Рабочий стол\WcfPrototype\WcfServerSide\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 F:\Рабочий стол\WcfPrototype\WcfServerSide\WcfService1\obj\Debug\WcfService1.dll
 F:\Рабочий стол\WcfPrototype\WcfServerSide\WcfService1\obj\Debug\WcfService1.pdb
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfService1\bin\WcfService1.dll
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfService1\bin\WcfService1.pdb
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfService1\obj\Debug\WcfService1.dll
+F:\Документы\GitHub\WcfServerSide\TesterServer\WcfService1\obj\Debug\WcfService1.pdb
