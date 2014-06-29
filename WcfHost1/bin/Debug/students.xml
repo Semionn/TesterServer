@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <Name>Петя</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <Name>Вася</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <Name>Маша</Name>
+  </User>
+</ArrayOfUser>
