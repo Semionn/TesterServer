@@ -3,111 +3,81 @@
   <Name>Ознакомительный тест</Name>
   <Tasks>
     <Task>
-      <Text>Простой вопрос 1</Text>
+      <Text>Простой вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>1</RightAnswer>
       <Difficult>0.25</Difficult>
     </Task>
     <Task>
-      <Text>Средний вопрос 1</Text>
+      <Text>Средний вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>0</RightAnswer>
       <Difficult>0.5</Difficult>
     </Task>
-	<Task>
-      <Text>Простой вопрос 2</Text>
-      <Answers>
-        <string>Вариант 1</string>
-        <string>Вариант 2</string>
-        <string>Вариант 3</string>
-        <string>Вариант 4</string>
-      </Answers>
-      <RightAnswer>2</RightAnswer>
-      <Difficult>0.25</Difficult>
-    </Task>
     <Task>
-      <Text>Средний вопрос 2</Text>
+      <Text>Простой вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
-      </Answers>
-      <RightAnswer>2</RightAnswer>
-      <Difficult>0.5</Difficult>
-    </Task>
-	<Task>
-      <Text>Простой вопрос 3</Text>
-      <Answers>
-        <string>Вариант 1</string>
-        <string>Вариант 2</string>
-        <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>1</RightAnswer>
       <Difficult>0.25</Difficult>
     </Task>
     <Task>
-      <Text>Средний вопрос 3</Text>
+      <Text>Средний вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>0</RightAnswer>
       <Difficult>0.5</Difficult>
     </Task>
-	<Task>
-      <Text>Простой вопрос 4</Text>
+    <Task>
+      <Text>Простой вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
-      <RightAnswer>3</RightAnswer>
+      <RightAnswer>1</RightAnswer>
       <Difficult>0.25</Difficult>
     </Task>
     <Task>
-      <Text>Средний вопрос 4</Text>
+      <Text>Средний вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
-      <RightAnswer>3</RightAnswer>
+      <RightAnswer>0</RightAnswer>
       <Difficult>0.5</Difficult>
     </Task>
-	<Task>
-      <Text>Сложный вопрос 1</Text>
+    <Task>
+      <Text>Сложный вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>1</RightAnswer>
       <Difficult>0.75</Difficult>
     </Task>
     <Task>
-      <Text>Сложный вопрос 2</Text>
+      <Text>Сложный вопрос</Text>
       <Answers>
         <string>Вариант 1</string>
         <string>Вариант 2</string>
         <string>Вариант 3</string>
-        <string>Вариант 4</string>
       </Answers>
       <RightAnswer>0</RightAnswer>
       <Difficult>0.75</Difficult>

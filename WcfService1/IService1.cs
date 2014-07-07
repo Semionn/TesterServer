@@ -15,22 +15,19 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
-
-        /*[OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);*/
-
-        [OperationContract]
         List<TestsTheme> GetAllTests();
         
         [OperationContract]
-        List<User> GetAllUsers();
+        List<UserGroup> GetAllUsers();
 
         [OperationContract]
         void SendTestResult(TestPassage message);
 
         [OperationContract]
         bool Login(string username, string pass);
+
+        [OperationContract]
+        IRTTable GetIRT(Test test);
     }
 
     [DataContract]
@@ -174,8 +171,28 @@ namespace WcfService1
         }
 
     }
-    
-    
+
+    [DataContract]
+    public class UserGroup
+    {
+        private string name = "Group";
+        private List<User> users;
+
+        [DataMember]
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        [DataMember]
+        public List<User> Users
+        {
+            get { return users; }
+            set { users = value; }
+        }
+
+    }
 
     [DataContract]
     public class TestsTheme
@@ -203,6 +220,7 @@ namespace WcfService1
     {
         private string name = "";
         private List<Task> tasks = new List<Task>();
+        private IRTTable irt = null;
 
         [DataMember]
         public string Name
@@ -216,9 +234,17 @@ namespace WcfService1
         {
             get { return tasks; }
             set { tasks = value; }
-        }      
-                
+        }
+        
+        public void SetIRT(IRTTable value)
+        {
+            irt = value;
+        }
 
+        public IRTTable GetIRT()
+        {
+            return irt;
+        }
     }
 
     [DataContract]

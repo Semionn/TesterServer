@@ -42,6 +42,34 @@ namespace WcfService1
             }
         }
 
+        public static void WriteXMLUserGroup(List<UserGroup> groups)
+        {
+            string path = "Группы";
+            Directory.CreateDirectory(path);
+            for (int i = 0; i < groups.Count; i++)
+            {
+                string s = path + "\\" + groups[i].Name + ".xml";
+                WriteXMLUsers(s, groups[i].Users);
+            }
+        }
+        public static List<UserGroup> ReadXMLUserGroup()
+        {
+            List<UserGroup> res = new List<UserGroup>();
+
+            string path = "Группы";
+            var groupsDirs = Directory.GetFiles(path);
+            for (int i = 0; i < groupsDirs.Count(); i++)
+            {
+                res.Add(new UserGroup()
+                {
+                    Name = Path.GetFileNameWithoutExtension(groupsDirs[i]),
+                    Users = new List<User>()
+                });
+                res[i].Users.AddRange(ReadXMLUsers(groupsDirs[i]));
+            }
+            return res;
+        }
+
         public static void WriteXMLTest(string filename, Test test)
         {
             XmlSerializer ser = new XmlSerializer(typeof(Test));

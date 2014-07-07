@@ -1,15 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUser xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <User>
     <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
     <Name>Петя</Name>
   </User>
   <User>
     <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
     <Name>Вася</Name>
   </User>
   <User>
     <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
     <Name>Маша</Name>
   </User>
 </ArrayOfUser>

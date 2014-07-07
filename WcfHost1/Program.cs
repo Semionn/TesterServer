@@ -68,18 +68,14 @@ namespace WcfHost1
                                         RightAnswer = 1
                                     });
 
-            WriteXMLTestTheme(test);*/
-            List<double> l = new List<double>();
-            for (int i = 0; i < 50; i++)
-            {
-                l.Add(GaussDistr());
-            }
-            l.Sort();
-            foreach (var item in l)
-            {
-                Console.WriteLine(item);
-            }
-            
+            XMLWork.WriteXMLTestTheme(test);*/
+            /*Console.WriteLine(Service1.GetTeta(
+                new List<double>() 
+                    {-1,-0.8,-0.8,-0.8,-0.8,-0.8,-0.7,-0.6,-0.6,-0.6,-0.5,-0.4,-0.4,-0.4,-0.3,-0.3,-0.3,-0.2,-0.2,-0.2,-0.2,-0.1,-0.1,0,0,1,0.1,0.2,0.2,0.2,0.2,0.2,0.3,0.3,0.3,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.5,0.5,0.7,0.8,0.8,0.8,0.8,1.3,1.5 }, 
+                new List<double>()
+                    { }, 
+                new List<int>() 
+                    { }));*/
             using (var host = new ServiceHost(typeof (Service1)))
             {
                 host.Open();

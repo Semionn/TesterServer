@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
 
 namespace WcfService1
 {
+    [DataContract]
     public class IRTTable
     {
+        [DataMember]
         public List<IRTRow> table;
-        public List<TestPassage> rows;
+        List<TestPassage> rows;
         public List<double> rList;
         public List<double> wList;
         public List<double> pList;
         public List<double> qList;
         public List<double> pqList;
         public List<double> qpList;
+        [DataMember]
         public List<double> betaList;
+        [DataMember]
         public List<double> Aj;
+        [DataMember]
         public int taskCount = 0;
+        [DataMember]
         public List<List<double>> predictTable = new List<List<double>>();
 
         public IRTTable(List<TestPassage> _columns)
@@ -26,14 +33,16 @@ namespace WcfService1
             table = new List<IRTRow>();
             taskCount = rows[0].Answers.Count;
             rList = new List<double>(new double[taskCount]);
+
+            InitTable();
+            Reduction();
+
             wList = new List<double>(new double[taskCount]);
             pList = new List<double>(new double[taskCount]);
             qList = new List<double>(new double[taskCount]);
             pqList = new List<double>(new double[taskCount]);
             qpList = new List<double>(new double[taskCount]);
             betaList = new List<double>(new double[taskCount]);
-
-            InitTable();
 
             SetList(ref wList, (a, i) => rows.Count - rList[i]);
             SetList(ref pList, (a, i) => rList[i] / rows.Count);
@@ -56,6 +65,40 @@ namespace WcfService1
             }
         }
 
+        public void Reduction()
+        {
+            for (int i = taskCount-1; i > 0; i--)
+            {
+                if (CheckColumn(i) != -1)
+                {
+                    rList.RemoveAt(i);
+                    for (int z = 0; z < table.Count; z++)
+                    {
+                        for (int j = i; j < taskCount - 1; j++)
+                        {
+                            table[z].val[j] = table[z].val[j + 1];
+                        }
+                        Array.Resize(ref table[z].val, taskCount);
+                    }
+                    taskCount--;
+                }
+            }
+        }
+
+        public int CheckColumn(int j)
+        {
+            List<double> list = new List<double>();
+            for (int i = 0; i < taskCount; i++)
+            {
+                list.Add(table[j].val[i]);
+            }
+            if (list.All(a => a == 0))
+                return 0;
+            if (list.All(a => a == 1))
+                return 1;
+            return -1;
+        }
+
         public void SetList(ref List<double> list, Func<double, int, double> func)
         {
             list = list.Select(func).ToList();
@@ -68,14 +111,17 @@ namespace WcfService1
                 predictTable.Add(new List<double>());
                 for (int j = 0; j < taskCount; j++)
                 {
-                    predictTable[i].Add(PredictFormula(table[i].teta, betaList[j], Aj[j], 0));
+                    predictTable[i].Add(PredictFormula(table[i].teta, betaList[j], Aj[j], 0.25));
                 }
             }
         }
 
-        public double PredictFormula(double teta, double beta, double aj, double c)
+        public static double PredictFormula(double teta, double beta, double aj, double c)
         {
-            return c + (1 - c) / (1 + Math.Exp(-aj * (teta - beta)));
+            //return c + (1 - c) / (1 + Math.Exp(-aj * (teta - beta)));
+            //return 1 / (1 + Math.Exp(-aj * (teta - beta)));
+            return 1/(1 + Math.Exp(beta - teta));
+            //return c+(1-c)/(1 + Math.Exp(beta - teta));
         }
 
         public List<double> GetRyj()
@@ -117,17 +163,20 @@ namespace WcfService1
 
     }
 
+    [DataContract]
     public class IRTRow
     {
         public Test test;
         public IRTTable mainTable;
         public double[] val;
+        [DataMember]
         public double sum;
 
         public double Y;
         public double p;
         public double q;
         public double pq;
+        [DataMember]
         public double teta;
 
         public IRTRow(IRTTable table,TestPassage testPassage)

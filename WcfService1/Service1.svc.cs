@@ -17,22 +17,25 @@ namespace WcfService1
     {
         public Service1()
         {
+            if (tests == null) 
+                tests = XMLWork.ReadXMLTestTheme();
 
-            tests = XMLWork.ReadXMLTestTheme();
-
-            tests[0].Tests[0].Tasks = new List<Task>();
+            /*tests[0].Tests[0].Tasks = new List<Task>();
             for (int i = 0; i < 50; i++)
             {
                 tests[0].Tests[0].Tasks.Add(new Task() 
                 { 
                     Answers = new List<string>(){"1","2","3","4"},
-                    Difficult = 0.25+GaussDistr()/2,
+                    Difficult = GaussDistr(),
                     RightAnswer = (int)(rnd()*4),
                     Text = "none"
                 });
-            }
+            }*/
 
-            //students = XMLWork.ReadXMLUsers("students.xml");
+            if (studentGroups == null)
+                studentGroups = XMLWork.ReadXMLUserGroup();
+            
+            /*
             students = new List<User>();
             for (int i = 0; i < 50; i++)
             {
@@ -47,29 +50,10 @@ namespace WcfService1
 
             irt = new IRTTable(testPassage);
             PrintIntoFileExcel(irt);
-            PrintPredictFileExcel(irt);
+            PrintPredictFileExcel(irt);*/
 
         }
         
-
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
-
-        /*public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }*/
-
         public bool Login(string username, string pass)
         {
             var user = FindUser(username);
@@ -85,21 +69,24 @@ namespace WcfService1
 
         public User FindUser(string name)
         {
-            for (int i = 0; i < students.Count; i++)
+            for (int j = 0; j < studentGroups.Count; j++)
             {
-                if (students[i].Name == name)
+                for (int i = 0; i < studentGroups[j].Users.Count; i++)
                 {
-                    return students[i];
+                    if (studentGroups[j].Users[i].Name == name)
+                    {
+                        return studentGroups[j].Users[i];
+                    }
                 }
             }
             return null;
         }
 
         public static Dictionary<Service1, string> instances = new Dictionary<Service1, string>();
-        public static List<TestsTheme> tests = new List<TestsTheme>();
-        private List<User> students = new List<User>();
-        private List<TestPassage> testPassage = new List<TestPassage>();
-        private IRTTable irt;
+        public static List<TestsTheme> tests = null;
+        public static List<UserGroup> studentGroups = null;
+        public static List<TestPassage> testPassage = new List<TestPassage>();
+        public static List<IRTTable> irt;
  
         public List<TestsTheme> GetAllTests()
         {
@@ -113,7 +100,7 @@ namespace WcfService1
 
             if (testPassage.Count >= 2)
             {
-                irt = new IRTTable(testPassage);
+                //irt = new IRTTable(testPassage);
                 //PrintIntoFile(irt);
             }
         }
@@ -222,18 +209,22 @@ namespace WcfService1
             }
             s += "Teta";
             sw.WriteLine(s);
+            irt.table.Sort((a, b) => a.teta == b.teta ? 0 : a.teta > b.teta ? 1 : -1);
 
             for (int i = 0; i < testPassage.Count; i++)
             {
                 s = string.Format("{0};", i);
                 for (int j = 0; j < irt.taskCount; j++)
                 {
-                    s += string.Format("{0};", irt.predictTable[i][j]);
+                    //s += string.Format("{0};", irt.predictTable[i][j]);
+                    s += string.Format("{0:f2};", GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), j));
                 }
                 s += irt.table[i].p.ToString() + ";";
                 s += irt.table[i].q.ToString() + ";";
                 s += string.Format("{0:f2};", irt.table[i].pq);
-                s += string.Format("{0:f2};", irt.table[i].teta) + ";";
+                s += string.Format("{0:f2};", irt.table[i].teta);
+                //s += string.Format("{0:f2};", GetTeta(irt.betaList, irt.Aj, irt.table[i].val.ToList()));
+                s += string.Format("{0:f2};", GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), irt.taskCount));
                 sw.WriteLine(s);
             }
             s = "w;";
@@ -242,16 +233,16 @@ namespace WcfService1
                 s += string.Format("{0:f1};", irt.wList[i]);
             }
             sw.WriteLine(s);
-            s = "p;";
+            s = "Aj;";
             for (int i = 0; i < irt.taskCount; i++)
             {
-                s += string.Format("{0:f1};", irt.pList[i]);
+                s += string.Format("{0:f2};", irt.Aj[i]);
             }
             sw.WriteLine(s);
-            s = "b;";
+            s = "beta;";
             for (int i = 0; i < irt.taskCount; i++)
             {
-                s += string.Format("{0:f1};", irt.betaList[i]);
+                s += string.Format("{0:f2};", irt.betaList[i]);
             }
             sw.WriteLine(s);
 
@@ -260,15 +251,18 @@ namespace WcfService1
 
         public void SetStudentKnowledge()
         {
-            List<double> l = new List<double>();
-            for (int i = 0; i < students.Count; i++)
+            for (int j = 0; j < studentGroups.Count; j++)
             {
-                l.Add(GaussDistr());
-            }
-            l.Sort();
-            for (int i = 0; i < students.Count; i++)
-            {
-                students[i].knowledge = l[i];
+                List<double> l = new List<double>();
+                for (int i = 0; i < studentGroups[j].Users.Count; i++)
+                {
+                    l.Add(GaussDistr());
+                }
+                l.Sort();
+                for (int i = 0; i < studentGroups[j].Users.Count; i++)
+                {
+                    studentGroups[j].Users[i].knowledge = l[i];
+                }
             }
         }
 
@@ -281,7 +275,8 @@ namespace WcfService1
             for (int i = 0; i < test.Tasks.Count; i++)
             {
                 int right = test.Tasks[i].RightAnswer;
-                if (rnd() < user.knowledge * (1 - test.Tasks[i].Difficult * test.Tasks[i].Difficult))
+                double taskP = 0.25+(1 - test.Tasks[i].Difficult);
+                if (rnd() < 0.25+user.knowledge * (taskP)*0.75)
                 {
                     result.Answers.Add(right);
                 }
@@ -322,11 +317,124 @@ namespace WcfService1
             return rand.NextDouble();
         }
 
-        public List<User> GetAllUsers()
+        static double FuncDeriv(List<double> beta, List<double> aj, List<double> right, double teta)
         {
-            return students;
+            double c = 0.25;
+            double res = 0;
+            for (int i = 0; i < beta.Count; i++)
+            {
+                double ch = aj[i] * (1 - c) * (Math.Exp(aj[i] * (beta[i] + teta)));
+                double zn = Math.Pow(c * (Math.Exp(aj[i] * (beta[i] - teta)) + 1), 2);
+                if (right[i] > 0 ? true : false)
+                    res += ch / zn;
+                else
+                    res -= ch / zn;
+            }
+            return res;
         }
 
+        static double FuncDeriv2(List<double> beta, List<double> aj, List<double> right, double teta)
+        {
+            double c = 0.25;
+            double res = 0;
+            double ch = 0;
+            for (int i = 0; i < beta.Count; i++)
+            {
+                ch += Math.Pow(IRTTable.PredictFormula(teta, beta[i], aj[i], c) - right[i], 2);
+            }
+            res = Math.Sqrt(ch);
+            return res;
+        }
+
+
+        static double FuncResult(List<double> beta, List<double> aj, List<double> right, double teta, int k)
+        {
+            double c = 0.25;
+            double res = 1;
+            for (int i = 0; i < k; i++)//beta.count
+            {
+                if (right[i] > 0)
+                    res *= IRTTable.PredictFormula(teta, beta[i], aj[i], c);
+                else
+                    res *= 1 - IRTTable.PredictFormula(teta, beta[i], aj[i], c);
+            }
+            return res;
+        }
+
+        static double Binary(double a, double b, List<double> beta, List<double> aj, List<double> right)
+        {
+            double x = (a + b) / 2;
+            while (Math.Abs(FuncDeriv2(beta, aj, right, x)) > 0.01)
+            {
+                if (FuncDeriv2(beta, aj, right, x) < 0)
+                    b = x;
+                else
+                    a = x;
+                x = (a + b) / 2;
+            }
+            return x;
+        }
+
+        static double iterative(double a, double b, List<double> beta, List<double> aj, List<double> right)
+        {
+            double x = (a + b) / 2;
+            double step = 0.01;
+            int k = 1;
+            double res = FuncDeriv2(beta, aj, right, x);
+            if (res < FuncDeriv2(beta, aj, right, x + step))
+                k = -1;
+            while (true)
+            {
+                x += k * step;
+                double temp = FuncDeriv2(beta, aj, right, x);
+                if (temp > res)
+                    break;
+                res = temp;
+                if (Math.Abs(x) >= 20)
+                    break;
+            }
+            return x;
+        }
+
+        static double iterative2(double a, double b, List<double> beta, List<double> aj, List<double> right, int count)
+        {
+            double x = (a + b) / 2;
+            double step = 0.01;
+            int k = 1;
+            double res = FuncResult(beta, aj, right, x, count);
+            if (res > FuncResult(beta, aj, right, x + step, count))
+                k = -1;
+            while (true)
+            {
+                x += k * step;
+                double temp = FuncResult(beta, aj, right, x, count);
+                if (temp < res)
+                    break;
+                res = temp;
+                if (Math.Abs(x) >= 20)
+                    break;
+            }
+            return x;
+        }
+
+        public static double GetTeta(List<double> beta, List<double> aj, List<double> right)
+        {
+            return iterative(-10, 10, beta, aj, right);
+        }
+        public static double GetTeta2(List<double> beta, List<double> aj, List<double> right, int count)
+        {
+            return iterative2(-10, 10, beta, aj, right, count);
+        }
+
+        public List<UserGroup> GetAllUsers()
+        {
+            return studentGroups;
+        }
+
+        public IRTTable GetIRT(Test test)
+        {
+            return test.GetIRT();
+        }
     }
 
 }
