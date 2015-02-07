@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
+    <ID>3</ID>
+    <Name>Студент 1</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
+    <ID>4</ID>
+    <Name>Студент 2</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.5</knowledge>
+    <ID>5</ID>
+    <Name>Студент 3</Name>
+  </User>
+</ArrayOfUser>

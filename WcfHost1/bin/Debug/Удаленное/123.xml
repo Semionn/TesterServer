@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <taskCount>0</taskCount>
+    <predictTable />
+  </irt>
+  <ID>6</ID>
+  <Name>123</Name>
+  <Tasks>
+    <Task>
+      <Text>123</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+        <string>Вариант 4</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text />
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+        <string>Вариант 4</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text />
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+        <string>Вариант 4</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text />
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+        <string>Вариант 4</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+  </Tasks>
+  <Score>100</Score>
+  <TimeLimit>20</TimeLimit>
+</Test>

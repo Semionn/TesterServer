@@ -10,15 +10,26 @@ using System.Security.Cryptography;
 
 namespace WcfService1
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IService1
     {
         [OperationContract]
         List<TestsTheme> GetAllTests();
+
+        [OperationContract]
+        List<string> GetThemesNames();
+
+        [OperationContract]
+        int GetTestsCount(int themeNum);
         
         [OperationContract]
+        Test GetTest(int themeNum, int testID);
+
+        [OperationContract]
         List<UserGroup> GetAllUsers();
+
+        [OperationContract]
+        List<User> GetAdmins();
 
         [OperationContract]
         void SendTestResult(TestPassage message);
@@ -27,7 +38,49 @@ namespace WcfService1
         bool Login(string username, string pass);
 
         [OperationContract]
+        bool LoginAdmin(string username, string pass);
+
+        [OperationContract]
         IRTTable GetIRT(Test test);
+
+        [OperationContract]
+        bool AddTestTheme(string testThemeName);
+
+        [OperationContract]
+        bool AddTest(string testThemeName, Test test);
+
+        [OperationContract]
+        bool AddGroup(string groupName);
+
+        [OperationContract]
+        bool AddStudent(string groupName, string studentName);
+
+        [OperationContract]
+        Task GetEmptyTask();
+
+        [OperationContract]
+        bool SaveTest(Test test);
+
+        [OperationContract]
+        bool SaveAll();
+
+        [OperationContract]
+        bool Rollback();
+
+        [OperationContract]
+        Test TestCopy(Test test);
+
+        [OperationContract]
+        Task GetTaskAdaptive(TestPassage testPassage, Test test, out double teta);
+
+        [OperationContract]
+        bool RemoveTest(int testID);
+
+        [OperationContract]
+        bool RemoveTestPassage(int testID, List<int> delRows);
+
+        [OperationContract]
+        bool CheckIRTAdaptive(Test test);
     }
 
     [DataContract]
@@ -45,7 +98,7 @@ namespace WcfService1
 
         public bool AnswerRight(int i)
         {
-            if (i < 0 || i > answers.Count)
+            if (i < 0 || i > answers.Count-1)
                 return false;
             return Answers[i] == Test.Tasks[i].RightAnswer;
         }
@@ -112,30 +165,7 @@ namespace WcfService1
             }
         }
     }
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        private bool boolValue = true;
-        private string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
-
-
+    
     [DataContract]
     public class User
     {
@@ -144,6 +174,8 @@ namespace WcfService1
 
         private List<TestPassage> completedTests;
         public double knowledge = 0.5;
+        [DataMember]
+        public int ID = -1;
 
         [DataMember]
         public string Name
@@ -212,15 +244,20 @@ namespace WcfService1
         {
             get { return tests; }
             set { tests = value; }
-        }      
+        }
     }
 
     [DataContract]
     public class Test
     {
+        [DataMember]
+        public IRTTable irt = new IRTTable();
+        [DataMember]
+        public int ID;
         private string name = "";
         private List<Task> tasks = new List<Task>();
-        private IRTTable irt = null;
+        private int score;
+        private int timeLimitMinutes = 20;
 
         [DataMember]
         public string Name
@@ -235,15 +272,19 @@ namespace WcfService1
             get { return tasks; }
             set { tasks = value; }
         }
-        
-        public void SetIRT(IRTTable value)
+
+        [DataMember]
+        public int Score
         {
-            irt = value;
+            get { return score; }
+            set { score = value; }
         }
 
-        public IRTTable GetIRT()
+        [DataMember]
+        public int TimeLimit
         {
-            return irt;
+            get { return timeLimitMinutes; }
+            set { timeLimitMinutes = value; }
         }
     }
 
@@ -281,6 +322,6 @@ namespace WcfService1
         {
             get { return difficult; }
             set { difficult = value; }
-        }        
+        }
     }
 }

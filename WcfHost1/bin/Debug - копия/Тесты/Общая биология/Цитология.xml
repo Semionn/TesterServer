@@ -1,0 +1,2312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <table>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+    </table>
+    <rList>
+      <double>2</double>
+      <double>0</double>
+      <double>1</double>
+      <double>1</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+    </rList>
+    <wList>
+      <double>0</double>
+      <double>2</double>
+      <double>1</double>
+      <double>1</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+      <double>2</double>
+    </wList>
+    <pList>
+      <double>1</double>
+      <double>0</double>
+      <double>0.5</double>
+      <double>0.5</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+    </pList>
+    <qList>
+      <double>0</double>
+      <double>1</double>
+      <double>0.5</double>
+      <double>0.5</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+    </qList>
+    <pqList>
+      <double>0</double>
+      <double>0</double>
+      <double>0.25</double>
+      <double>0.25</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+    </pqList>
+    <qpList>
+      <double>0</double>
+      <double>INF</double>
+      <double>1</double>
+      <double>1</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+    </qpList>
+    <betaList>
+      <double>-INF</double>
+      <double>INF</double>
+      <double>0</double>
+      <double>0</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+      <double>INF</double>
+    </betaList>
+    <Aj>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+    </Aj>
+    <taskCount>98</taskCount>
+    <predictTable>
+      <ArrayOfDouble>
+        <double>NaN</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>NaN</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+    </predictTable>
+  </irt>
+  <ID>3</ID>
+  <Name>Цитология</Name>
+  <Tasks>
+    <Task>
+      <Text>Комплексы (стопки) тилакоидов в хлоропластах называются:</Text>
+      <Answers>
+        <string>кристами</string>
+        <string>стромой</string>
+        <string>хроматофорами</string>
+        <string>гранами</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Плоские цистерны, отшнуровывающиеся от внутренней мембраны хлоропластов, называются:</Text>
+      <Answers>
+        <string>кристами</string>
+        <string>тилакоидами</string>
+        <string>гранами</string>
+        <string>мезосомами</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Пластиды, в которых протекают все реакции фотосинтеза (фотофосфорилирование и фиксация углекислого газа), называются:</Text>
+      <Answers>
+        <string>лейкопластами</string>
+        <string>хромопластами</string>
+        <string>амилопластами</string>
+        <string>хлоропластами</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Двумембранные органоиды, в которых осуществляется аэробное дыхание, называются:</Text>
+      <Answers>
+        <string>пластидами</string>
+        <string>хромопластами</string>
+        <string>хлоропластами</string>
+        <string>митохондриями</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В состав клеточного сока входят:</Text>
+      <Answers>
+        <string>неорганические соли, пигменты, растворимые углеводы, органические кислоты, некоторые белки</string>
+        <string>белки и углеводы</string>
+        <string>нуклеиновые кислоты, белки, липиды и углеводы</string>
+        <string>минеральные соли и витамины</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Одномембранные пузырьки, содержащие гидролитические ферменты (протеазы, нуклеазы, липазы), называются:</Text>
+      <Answers>
+        <string>пероксисомами</string>
+        <string>лизосомами</string>
+        <string>сферосомами</string>
+        <string>вакуолями</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Местом хранения, воспроизведения и начальной реализации наследственной информации в эукариотической клетке является:</Text>
+      <Answers>
+        <string>цитоплазма</string>
+        <string>ядрышко</string>
+        <string>ядро (нуклеус)</string>
+        <string>вся клетка</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К прокариотам относятся:</Text>
+      <Answers>
+        <string>бактерии, водоросли и грибы</string>
+        <string>эубактерии, цианобактерии, архебактерии</string>
+        <string>все одноклеточные организмы</string>
+        <string>организмы, не имеющие настоящих тканей</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Местом хранения, воспроизведения и начальной реализации наследственной информации в прокариотической клетке является:</Text>
+      <Answers>
+        <string>нуклеотид</string>
+        <string>нуклеоид</string>
+        <string>мезосома</string>
+        <string>вакуоль</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Мелкие кольцевые молекулы ДНК, которые служат дополнительными носителями наследственной информации у прокариот, называются:</Text>
+      <Answers>
+        <string>хромосомами</string>
+        <string>бактериальными хромосомами</string>
+        <string>прокариотическими хромосомами</string>
+        <string>плазмидами</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Ядро состоит из:</Text>
+      <Answers>
+        <string>ядерной оболочки и хромосом</string>
+        <string>ядерной мембраны и хромосом</string>
+        <string>хромосом, ядрышек и оболочки</string>
+        <string>ядерной оболочки, ядерного матрикса, хроматина и ядрышка</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Какие эукариотические клетки не содержат ядра?</Text>
+      <Answers>
+        <string>все эритроциты</string>
+        <string>эритроциты и лимфоциты</string>
+        <string>зрелые эритроциты млекопитающих</string>
+        <string>зрелые эритроциты и лимфоциты человека</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Ядерная оболочка состоит из:</Text>
+      <Answers>
+        <string>двойной ядерной мембраны, пронизанной порами</string>
+        <string>хроматина</string>
+        <string>мембран эндоплазматической сети</string>
+        <string>впячиваний цитоплазматической мембраны</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В состав хроматина (интерфазных хромосом) входит:</Text>
+      <Answers>
+        <string>ДНК</string>
+        <string>ДНК и РНК</string>
+        <string>ДНК, РНК, белки (гистоны и др.) и неорганические ионы</string>
+        <string>нуклеотиды</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Ядрышко – это внутриядерная структура, которая контролирует:</Text>
+      <Answers>
+        <string>репликацию ДНК</string>
+        <string>синтез рРНК и первичную сборку рибосом</string>
+        <string>биосинтез белков</string>
+        <string>синтез тРНК и мРНК</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Биологическая мембрана, покрывающая всю клетку, называется:</Text>
+      <Answers>
+        <string>гликокаликс</string>
+        <string>оболочка</string>
+        <string>плазматическая мембрана, или плазмалемма</string>
+        <string>клеточная стенка, или клеточная оболочка</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Согласно жидкостно-мозаичной (жидкокристаллической) модели, основу всех биологических мембран составляет:</Text>
+      <Answers>
+        <string>фосфолипидный бислой</string>
+        <string>липиды, белки и углеводы</string>
+        <string>фосфолипидный монослой</string>
+        <string>гидрофобный бислой</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В состав биологических мембран входят:</Text>
+      <Answers>
+        <string>липиды, белки и углеводы</string>
+        <string>только фосфолипиды</string>
+        <string>только липиды и белки</string>
+        <string>фосфолипиды, белки и нуклеиновые кислоты</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Комплекс биополимеров на внешней поверхности плазмалеммы, характерный для животных, называется:</Text>
+      <Answers>
+        <string>гликокаликс</string>
+        <string>кортекс</string>
+        <string>клеточная стенка, или клеточная оболочка</string>
+        <string>эктоплазма</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Основным свойством биологических мембран является:</Text>
+      <Answers>
+        <string>прочность</string>
+        <string>избирательная проницаемость</string>
+        <string>гидрофобность</string>
+        <string>способность к информационно-сигнальным взаимодействиям</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Фаго- и пиноцитоз объединяются под общим названием:</Text>
+      <Answers>
+        <string>экзоцитоз</string>
+        <string>эндоцитоз</string>
+        <string>диффузия</string>
+        <string>выделение</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Транспорт частиц и капель раствора из клетки наружу называется:</Text>
+      <Answers>
+        <string>диффузия</string>
+        <string>экзоцитоз</string>
+        <string>эндоцитоз</string>
+        <string>фагоцитоз</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Транспорт веществ через мембраны от большей концентрации к меньшей называется:</Text>
+      <Answers>
+        <string>пиноцитоз</string>
+        <string>транспортом, не зависящим от градиента концентрации</string>
+        <string>транспортом против градиента концентрации</string>
+        <string>транспортом по градиенту концентрации</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Транспорт веществ через мембраны против градиента концентрации с участием белков-переносчиков и непосредственной затратой энергии называется:</Text>
+      <Answers>
+        <string>активным</string>
+        <string>пассивным</string>
+        <string>экзоцитозом</string>
+        <string>эндоцитозом</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В состав цитоскелета входят:</Text>
+      <Answers>
+        <string>микрофиламенты, микротрубочки и промежуточные филаменты</string>
+        <string>актин, миозин и тубулин</string>
+        <string>актин, миозин, тропонин, тубулин, динеин</string>
+        <string>волокна и сосуды</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Немембранные органоиды, обеспечивающие биосинтез белков, называются:</Text>
+      <Answers>
+        <string>микротрубочками</string>
+        <string>ядрышками</string>
+        <string>хромосомами</string>
+        <string>рибосомами</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Комплекс из одной молекулы иРНК (мРНК) и связанных с ней десятков рибосом называется:</Text>
+      <Answers>
+        <string>нуклеосома</string>
+        <string>кинетосома</string>
+        <string>центросома</string>
+        <string>полисома</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Органоид, контролирующий образование микротрубочек цитоскелета, органоидов движения, веретена деления, называется:</Text>
+      <Answers>
+        <string>клеточный центр (центросома)</string>
+        <string>кинетосома</string>
+        <string>акросома</string>
+        <string>ядро</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Основу клеточного центра составляют:</Text>
+      <Answers>
+        <string>центриоли</string>
+        <string>микрофиламенты</string>
+        <string>промежуточные филаменты</string>
+        <string>центромеры</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Одиночная центриоль представляет собой полый цилиндр, стенки которого состоят из:</Text>
+      <Answers>
+        <string>9 одиночных микротрубочек</string>
+        <string>9 дублетов микротрубочек</string>
+        <string>9 триплетов микротрубочек</string>
+        <string>9 дублетов и 2 одиночных микротрубочки</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Система параллельно ориентированных тубулиновых микротрубочек, составляющая основу жгутика (осевую нить жгутика), называется:</Text>
+      <Answers>
+        <string>тубулин</string>
+        <string>флагеллин</string>
+        <string>аксонема</string>
+        <string>центриоль</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Система цистерн и трубочек, отграниченная от остальной части цитоплазмы единой замкнутой внутриклеточной мембраной, называется:</Text>
+      <Answers>
+        <string>вакуоль</string>
+        <string>аппарат Гольджи (диктиосома)</string>
+        <string>цитоскелет</string>
+        <string>эндоплазматическая сеть (эндоплазматический ретикулум)</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Рибосомы (полисомы) обнаруживаются на внешней поверхности:</Text>
+      <Answers>
+        <string>гладкой эндоплазматической сети</string>
+        <string>шероховатой эндоплазматической сети</string>
+        <string>цитоплазматической мембраны</string>
+        <string>лизосом</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Главной функцией гранулярного ЭПР является:</Text>
+      <Answers>
+        <string>формирование ядерной оболочки</string>
+        <string>формирование лизосом</string>
+        <string>биосинтез, транспортировка и начальная модификация белков</string>
+        <string>биосинтез липидов и полисахаридов</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В полости агранулярного ЭПР происходит:</Text>
+      <Answers>
+        <string>репликация ДНК, синтез тРНК и рРНК</string>
+        <string>окончательная модификация белков и их сортировка</string>
+        <string>биосинтез липидов и полисахаридов</string>
+        <string>биосинтез, транспортировка и начальная модификация белков</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Стопка уплощенных одномембранных цистерн, составляющая основу аппарата Гольджи, называется:</Text>
+      <Answers>
+        <string>мезосома</string>
+        <string>диктиосома</string>
+        <string>рибосома</string>
+        <string>эндосома</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Накопление веществ, их модификация и сортировка, упаковка в одномембранные пузырьки и формирование первичных лизосом происходит в:</Text>
+      <Answers>
+        <string>аппарате Гольджи</string>
+        <string>гранулярном ЭПР</string>
+        <string>гладком ЭПР</string>
+        <string>плазмалемме</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Существование клеток открыл:</Text>
+      <Answers>
+        <string>М. Шлейден</string>
+        <string>Марчелло Мальпиги</string>
+        <string>Роберт Гук</string>
+        <string>А. ван Левенгук</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Существование одноклеточных организмов открыл:</Text>
+      <Answers>
+        <string>Т. Шванн</string>
+        <string>М. Шлейден</string>
+        <string>Л. Пастер</string>
+        <string>А. ван Левенгук</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Клетки, содержащие ядро, называются:</Text>
+      <Answers>
+        <string>акариотическими</string>
+        <string>прокариотическими</string>
+        <string>нуклеоидными</string>
+        <string>эукариотическими</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Число ядер в одной клетке обычно равно:</Text>
+      <Answers>
+        <string>одному</string>
+        <string>двум</string>
+        <string>от 3 до 10</string>
+        <string>не менее 2</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Число ядрышек в одной клетке обычно равно:</Text>
+      <Answers>
+        <string>1–10</string>
+        <string>10-50</string>
+        <string>50-100</string>
+        <string>более 100</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В состав биологических мембран обязательно входят:</Text>
+      <Answers>
+        <string>РНК</string>
+        <string>целлюлоза</string>
+        <string>белки</string>
+        <string>ДНК</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Клетки растений защищены оболочкой, обязательным компонентом которой является:</Text>
+      <Answers>
+        <string>хитин</string>
+        <string>лигнин</string>
+        <string>целлюлоза</string>
+        <string>муреин</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Поглощение клеткой крупных частиц называется:</Text>
+      <Answers>
+        <string>фагоцитоз</string>
+        <string>диффузия</string>
+        <string>пиноцитоз</string>
+        <string>экзоцитоз</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Поглощение клеткой капель жидкости называется:</Text>
+      <Answers>
+        <string>водоснабжение</string>
+        <string>питание</string>
+        <string>диффузия</string>
+        <string>пиноцитоз</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Внутриклеточные структуры, которые не являются ее обязательными компонентами, называются:</Text>
+      <Answers>
+        <string>органоидами</string>
+        <string>вакуолями</string>
+        <string>экскретами</string>
+        <string>включениями</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Немембранные органоиды, обеспечивающие биосинтез белков, называются:</Text>
+      <Answers>
+        <string>центросомы</string>
+        <string>протеазы</string>
+        <string>рибосомы</string>
+        <string>фагосомы</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Целостная рибосома состоит:</Text>
+      <Answers>
+        <string>из трех субъединиц (одной большой и двух малых)</string>
+        <string>из двух субъединиц (большой и малой)</string>
+        <string>из 10 субъединиц</string>
+        <string>из большого числа субъединиц</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Основу клеточного центра составляют полые цилиндры, которые называются:</Text>
+      <Answers>
+        <string>центросома</string>
+        <string>центросфера</string>
+        <string>центромеры</string>
+        <string>центриоли</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Одиночная центриоль представляет собой:</Text>
+      <Answers>
+        <string>тубулиновую микротрубочку</string>
+        <string>полый цилиндр, стенки центриолей состоят из 9 триплетов микротрубочек</string>
+        <string>цилиндр, вдоль оси которого тянутся 2 микротрубочки</string>
+        <string>полый цилиндр, стенки центриолей состоят из 9 дуплетов микротрубочек</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К органоидам движения относятся:</Text>
+      <Answers>
+        <string>жгутики и реснички</string>
+        <string>только жгутики</string>
+        <string>только реснички</string>
+        <string>жгутики, реснички и микротрубочки</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Система цистерн и трубочек, связанных между собой в единое внутриклеточное пространство, отграниченное от остальной части цитоплазмы замкнутой внутриклеточной мембраной, называется:</Text>
+      <Answers>
+        <string>аппарат Гольджи</string>
+        <string>цитоплазматическая мембрана</string>
+        <string>диктиосома</string>
+        <string>эндоплазматическая сеть, или эндоплазматический ретикулум</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Основной функцией эндоплазматической сети является:</Text>
+      <Answers>
+        <string>синтез ДНК</string>
+        <string>биосинтез и транспортировка различных веществ</string>
+        <string>биосинтез митохондрий</string>
+        <string>фотосинтез</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>На поверхности шероховатой ЭПС расположены:</Text>
+      <Answers>
+        <string>митохондрии</string>
+        <string>пластиды</string>
+        <string>рибосомы</string>
+        <string>лизосомы</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Часть эндоплазматической сети, на поверхности которой расположены рибосомы, называется:</Text>
+      <Answers>
+        <string>гладкая, или агранулярная ЭПС</string>
+        <string>шероховатая, или гранулярная ЭПС</string>
+        <string>аппарат Гольджи</string>
+        <string>мезосома</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Главной функцией гранулярного ЭПР является:</Text>
+      <Answers>
+        <string>синтез липидов</string>
+        <string>синтез РНК</string>
+        <string>биосинтез белков</string>
+        <string>биосинтез углеводов</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Часть эндоплазматической сети, на поверхности которой отсутствуют рибосомы, называется:</Text>
+      <Answers>
+        <string>гладкая, или агранулярная ЭПС</string>
+        <string>эндоплазма</string>
+        <string>цитоплазматическая мембрана</string>
+        <string>перинуклеарное пространство</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В полости агранулярного ЭПР происходит:</Text>
+      <Answers>
+        <string>биосинтез белков</string>
+        <string>биосинтез липидов и полисахаридов</string>
+        <string>синтез РНК</string>
+        <string>синтез ДНК</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Система (стопка) уплощенных одномембранных цистерн называется:</Text>
+      <Answers>
+        <string>мезосома</string>
+        <string>гладкая эндоплазматическая сеть</string>
+        <string>аппарат Гольджи</string>
+        <string>вакуоль</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Накопление веществ, их модификация и сортировка, упаковка конечных продуктов в одномембранные пузырьки, выведение секреторных вакуолей за пределы клетки и формирование первичных лизосом – это функции:</Text>
+      <Answers>
+        <string>всей эндоплазматической сети</string>
+        <string>гладкой эндоплазматической сети</string>
+        <string>шероховатой эндоплазматической сети</string>
+        <string>аппарата Гольджи</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Одномембранные пузырьки, содержащие гидролитические (пищеварительные) ферменты, называются:</Text>
+      <Answers>
+        <string>лизосомы</string>
+        <string>вакуоли</string>
+        <string>везикулы</string>
+        <string>мезосомы</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Заполненные жидкостью крупные одномембранные полости в клетках растений называются:</Text>
+      <Answers>
+        <string>лизосомы</string>
+        <string>секреторные вакуоли</string>
+        <string>паренхима</string>
+        <string>вакуоли</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Содержимое вакуолей называется:</Text>
+      <Answers>
+        <string>клеточным соком</string>
+        <string>матриксом</string>
+        <string>стромой</string>
+        <string>тканевой жидкостью</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К двумембранным органоидам (в состав которых входят внешняя и внутренняя мембраны) относятся:</Text>
+      <Answers>
+        <string>аппарат Гольджи, митохондрии и пластиды</string>
+        <string>только митохондрии</string>
+        <string>только пластиды</string>
+        <string>митохондрии и пластиды</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Полуавтономные органоиды, которые содержат собственные ДНК, все типы РНК, рибосомы и способны синтезировать некоторые белки, – это:</Text>
+      <Answers>
+        <string>только митохондрии</string>
+        <string>только пластиды</string>
+        <string>только хлоропласты</string>
+        <string>митохондрии и пластиды</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Главная функция митохондрий – это:</Text>
+      <Answers>
+        <string>кислородное дыхание</string>
+        <string>фотосинтез</string>
+        <string>биосинтез белков</string>
+        <string>биосинтез липидов</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Главное вещество, которое является источником энергии в клетке, – это:</Text>
+      <Answers>
+        <string>клетчатка</string>
+        <string>РНК</string>
+        <string>ДНК</string>
+        <string>АТФ</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Главная функция митохондрий – это:</Text>
+      <Answers>
+        <string>синтез полисахаридов</string>
+        <string>синтез АТФ</string>
+        <string>синтез ДНК</string>
+        <string>синтез липидов</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Внутренняя мембрана митохондрий образует гребневидные складки, которые называются:</Text>
+      <Answers>
+        <string>кристы</string>
+        <string>мезосомы</string>
+        <string>АТФазы</string>
+        <string>цитохромы</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Растительные клетки содержат особые двумембранные органоиды, которые называются:</Text>
+      <Answers>
+        <string>пластиды</string>
+        <string>лизосомы</string>
+        <string>диктиосомы</string>
+        <string>мезосомы</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К пластидам относятся:</Text>
+      <Answers>
+        <string>хлоропласты и митохондрии</string>
+        <string>хлоропласты и диктиосомы</string>
+        <string>вакуоли, митохондрии и хлоропласты</string>
+        <string>лейкопласты, хромопласты и хлоропласты</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Пластиды, в которых протекают все реакции фотосинтеза, называются:</Text>
+      <Answers>
+        <string>хлоропласты</string>
+        <string>хромопласты</string>
+        <string>лейкопласты</string>
+        <string>амилопласты</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Внутри хлоропластов имеются уплощенные цистерны, которые называются:</Text>
+      <Answers>
+        <string>кристы</string>
+        <string>тилакоиды</string>
+        <string>диктиосомы</string>
+        <string>вакуоли</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Комплексы (стопки) тилакоидов называются:</Text>
+      <Answers>
+        <string>ламеллы</string>
+        <string>граны</string>
+        <string>кристы</string>
+        <string>диктиосомы</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Внутреннее содержимое (основное вещество) хлоропластов называется:</Text>
+      <Answers>
+        <string>строма</string>
+        <string>цитоплазма</string>
+        <string>клеточный сок</string>
+        <string>межмембранный матрикс</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Ярко окрашенные (желтые, оранжевые, красные) пластиды называются:</Text>
+      <Answers>
+        <string>протеинопласты</string>
+        <string>амилопласты</string>
+        <string>липидопласты</string>
+        <string>хромопласты</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>При заболеваниях, называемых «болезнями накопления», клетки организма не способны расщеплять некоторые химические вещества в связи с отсутствием соответствующих ферментов в одной из органелл:</Text>
+      <Answers>
+        <string>агранулярная цитоплазматическая сеть</string>
+        <string>аппарат Гольджи</string>
+        <string>лизосомы</string>
+        <string>митохондрии</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Два слоя фосфолипидов с погруженными в них молекулами белка представляют собой:</Text>
+      <Answers>
+        <string>цитоплазму</string>
+        <string>хромосому</string>
+        <string>плазматическую мембрану</string>
+        <string>рибосому</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Клеточного строения не имеют:</Text>
+      <Answers>
+        <string>цианобактерии</string>
+        <string>эубактерии</string>
+        <string>архебактерии</string>
+        <string>бактериофаги</string>
+      </Answers>
+      <RightAnswer>4</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Крахмал накапливается в:</Text>
+      <Answers>
+        <string>хлоропластах</string>
+        <string>ядре</string>
+        <string>лейкопластах</string>
+        <string>хромопластах</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Организмы, клетки которых не имеют оформленного ядра и мембранных органоидов, относят к группе:</Text>
+      <Answers>
+        <string>прокариот</string>
+        <string>эукариот</string>
+        <string>автотрофов</string>
+        <string>гетеротрофов</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К мембранным органоидам клетки относятся:</Text>
+      <Answers>
+        <string>микротрубочки</string>
+        <string>клеточный центр</string>
+        <string>рибосомы</string>
+        <string>комплекс Гольджи</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К группе органоидов мембранного строения относятся:</Text>
+      <Answers>
+        <string>рибосомы, лизосомы, диктиосомы</string>
+        <string>митохондрии, эндоплазматическая сеть, комплекс Гольджи</string>
+        <string>лизосомы, диктиосомы, хромосомы</string>
+        <string>рибосомы, митохондрии, эндоплазматическая сеть</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Субъединицы рибосом формируются в:</Text>
+      <Answers>
+        <string>ядрышке</string>
+        <string>полирибосомах</string>
+        <string>цитоплазме</string>
+        <string>эндоплазматической сети</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Трофическими включениями клетки являются:</Text>
+      <Answers>
+        <string>микрофиламенты</string>
+        <string>центриоли</string>
+        <string>жировые капли</string>
+        <string>молекулы АТФ</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Полисахариды синтезируются в:</Text>
+      <Answers>
+        <string>цистернах гранулярной эндоплазматической сети</string>
+        <string>цистернах агранулярной эндоплазматической сети</string>
+        <string>комплексе Гольджи</string>
+        <string>рибосомах</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Кольцевая молекула ДНК митохондрии локализована в:</Text>
+      <Answers>
+        <string>матриксе</string>
+        <string>наружной мембране</string>
+        <string>внутренней мембране</string>
+        <string>межмембранном пространстве</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Хорошо развитая гранулярная ЭПС в клетке свидетельствует об интенсивной:</Text>
+      <Answers>
+        <string>транспортной функции</string>
+        <string>пищеварительной функции</string>
+        <string>выделительной функции</string>
+        <string>биосинтетической функции</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Какие клеточные органоиды способны к самоудвоению?</Text>
+      <Answers>
+        <string>митохондрии, пластиды, ядро, клеточный центр</string>
+        <string>митохондрии, пластиды, клеточный центр, рибосомы</string>
+        <string>митохондрии, пластиды, клеточный центр, веретено деления</string>
+        <string>митохондрии, пластиды</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В каких клеточных органоидах имеется ДНК?</Text>
+      <Answers>
+        <string>в ядре, митохондриях и пластидах</string>
+        <string>в ядре, митохондриях, пластидах и клеточном центре</string>
+        <string>в ядре, митохондриях и рибосомах</string>
+        <string>в ядре и митохондриях</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В клетках высших растений отсутствуют:</Text>
+      <Answers>
+        <string>митохондрии</string>
+        <string>хлоропласты</string>
+        <string>комплекс Гольджи</string>
+        <string>центриоли</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>За образование цитоскелета отвечает:</Text>
+      <Answers>
+        <string>комплекс Гольджи</string>
+        <string>клеточный центр</string>
+        <string>ЭПС</string>
+        <string>плазматическая мембрана</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Неклеточное строение имеют:</Text>
+      <Answers>
+        <string>дрожжи</string>
+        <string>пеницилл</string>
+        <string>вирус оспы</string>
+        <string>холерный вибрион</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Основное отличие в строении вируса оспы от дифтерийной палочки заключается в отсутствии у вируса:</Text>
+      <Answers>
+        <string>белков</string>
+        <string>ДНК</string>
+        <string>генов</string>
+        <string>рибосом</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>В ядре НЕ происходит:</Text>
+      <Answers>
+        <string>синтез ДНК</string>
+        <string>синтез РНК</string>
+        <string>синтез белка</string>
+        <string>сборка субъединиц рибосом</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Какое из приведенных утверждений является положением клеточной теории?</Text>
+      <Answers>
+        <string>все клетки многоклеточного организма выполняют одинаковые функции</string>
+        <string>все клетки многоклеточного организма одинаковы по строению</string>
+        <string>все организмы состоят из клеток</string>
+        <string>клетки в организме возникают из межклеточного вещества</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Какое из положений клеточной теории ввел в науку Р. Вирхов?</Text>
+      <Answers>
+        <string>все организмы состоят из клеток</string>
+        <string>всякая клетка происходит от другой клетки</string>
+        <string>каждая клетка есть некое самостоятельное целое</string>
+        <string>клетка — элементарная живая система</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+  </Tasks>
+  <Score>50</Score>
+  <TimeLimit>20</TimeLimit>
+</Test>

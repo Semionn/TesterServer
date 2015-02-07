@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <table />
+    <rList />
+    <wList />
+    <pList />
+    <qList />
+    <pqList />
+    <qpList />
+    <betaList />
+    <Aj />
+    <taskCount>0</taskCount>
+    <predictTable />
+  </irt>
+  <ID>3</ID>
   <Name>Тест модуля 1</Name>
   <Tasks>
     <Task>
@@ -23,4 +37,6 @@
       <Difficult>0.1</Difficult>
     </Task>
   </Tasks>
+  <Score>0</Score>
+  <TimeLimit>20</TimeLimit>
 </Test>

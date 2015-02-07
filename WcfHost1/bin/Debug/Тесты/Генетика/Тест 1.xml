@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <table>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>1</double>
+          <double>1</double>
+          <double>1</double>
+        </val>
+        <sum>3</sum>
+        <Y>3</Y>
+        <p>0.75</p>
+        <q>0.25</q>
+        <pq>3</pq>
+        <teta>1.0986122886681098</teta>
+        <userID>1</userID>
+      </IRTRow>
+    </table>
+    <rList>
+      <double>0</double>
+      <double>1</double>
+      <double>1</double>
+      <double>1</double>
+    </rList>
+    <wList>
+      <double>5</double>
+      <double>4</double>
+      <double>4</double>
+      <double>4</double>
+    </wList>
+    <pList>
+      <double>0</double>
+      <double>0.2</double>
+      <double>0.2</double>
+      <double>0.2</double>
+    </pList>
+    <qList>
+      <double>1</double>
+      <double>0.8</double>
+      <double>0.8</double>
+      <double>0.8</double>
+    </qList>
+    <pqList>
+      <double>0</double>
+      <double>0.16000000000000003</double>
+      <double>0.16000000000000003</double>
+      <double>0.16000000000000003</double>
+    </pqList>
+    <qpList>
+      <double>INF</double>
+      <double>4</double>
+      <double>4</double>
+      <double>4</double>
+    </qpList>
+    <betaList>
+      <double>INF</double>
+      <double>1.3862943611198906</double>
+      <double>1.3862943611198906</double>
+      <double>1.3862943611198906</double>
+    </betaList>
+    <Aj>
+      <double>NaN</double>
+      <double>47453132.812125765</double>
+      <double>47453132.812125765</double>
+      <double>47453132.812125765</double>
+    </Aj>
+    <taskCount>4</taskCount>
+    <predictTable>
+      <ArrayOfDouble>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+        <double>0</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>0</double>
+        <double>0.4285714285714286</double>
+        <double>0.4285714285714286</double>
+        <double>0.4285714285714286</double>
+      </ArrayOfDouble>
+    </predictTable>
+  </irt>
+  <ID>4</ID>
+  <Name>Тест 1</Name>
+  <Tasks>
+    <Task>
+      <Text>Гены не являются неаллельными, если расположены в:</Text>
+      <Answers>
+        <string>Одной хромосоме</string>
+        <string>Одинаковых локусах гомологичных хромосом</string>
+        <string>Разных локусах негомологичных хромосом</string>
+        <string>Одинаковых локусах негомологичных хромосом</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Организм, гетерозиготный по трем парам менделирующих признаков, образует:</Text>
+      <Answers>
+        <string>2 типа гамет</string>
+        <string>4 типа гамет</string>
+        <string>6 типов гамет</string>
+        <string>8 типов гамет</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>К типу взаимодействия аллельных генов не относится:</Text>
+      <Answers>
+        <string>Полное доминирование</string>
+        <string>Неполное доминирование</string>
+        <string>Эпистаз</string>
+        <string>Сверхдоминирование</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>Экспрессивность:</Text>
+      <Answers>
+        <string>Множественное действие гена</string>
+        <string>Многосложность гена</string>
+        <string>Степень выраженности признака</string>
+        <string>Частота проявления гена</string>
+      </Answers>
+      <RightAnswer>2</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+  </Tasks>
+  <Score>50</Score>
+  <TimeLimit>15</TimeLimit>
+</Test>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <table>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+      <IRTRow>
+        <val>
+          <double>0</double>
+          <double>0</double>
+          <double>0</double>
+        </val>
+        <sum>0</sum>
+        <Y>0</Y>
+        <p>0</p>
+        <q>1</q>
+        <pq>0</pq>
+        <teta>-INF</teta>
+        <userID>0</userID>
+      </IRTRow>
+    </table>
+    <rList>
+      <double>6</double>
+      <double>6</double>
+      <double>5</double>
+    </rList>
+    <wList>
+      <double>-4</double>
+      <double>-4</double>
+      <double>-3</double>
+    </wList>
+    <pList>
+      <double>3</double>
+      <double>3</double>
+      <double>2.5</double>
+    </pList>
+    <qList>
+      <double>-2</double>
+      <double>-2</double>
+      <double>-1.5</double>
+    </qList>
+    <pqList>
+      <double>-6</double>
+      <double>-6</double>
+      <double>-3.75</double>
+    </pqList>
+    <qpList>
+      <double>-0.66666666666666663</double>
+      <double>-0.66666666666666663</double>
+      <double>-0.6</double>
+    </qpList>
+    <betaList>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+    </betaList>
+    <Aj>
+      <double>NaN</double>
+      <double>NaN</double>
+      <double>NaN</double>
+    </Aj>
+    <taskCount>3</taskCount>
+    <predictTable>
+      <ArrayOfDouble>
+        <double>NaN</double>
+        <double>NaN</double>
+        <double>NaN</double>
+      </ArrayOfDouble>
+      <ArrayOfDouble>
+        <double>NaN</double>
+        <double>NaN</double>
+        <double>NaN</double>
+      </ArrayOfDouble>
+    </predictTable>
+  </irt>
+  <ID>5</ID>
+  <Name>Проверка</Name>
+  <Tasks>
+    <Task>
+      <Text>1</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>2</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+      </Answers>
+      <RightAnswer>0</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+    <Task>
+      <Text>3</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0</Difficult>
+    </Task>
+  </Tasks>
+  <Score>100</Score>
+  <TimeLimit>20</TimeLimit>
+</Test>

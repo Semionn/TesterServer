@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.055725555991859355</knowledge>
+    <ID>0</ID>
+    <Name>Администратор</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.13355942643947316</knowledge>
+    <ID>1</ID>
+    <Name>Преподаватель</Name>
+  </User>
+  <User>
+    <passwordHash>81DC9BDB52D04DC20036DBD8313ED055</passwordHash>
+    <knowledge>0.15398247510704777</knowledge>
+    <ID>2</ID>
+    <Name>Лаборант</Name>
+  </User>
+</ArrayOfUser>

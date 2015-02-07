@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irt>
+    <table />
+    <rList />
+    <wList />
+    <pList />
+    <qList />
+    <pqList />
+    <qpList />
+    <betaList />
+    <Aj />
+    <taskCount>0</taskCount>
+    <predictTable />
+  </irt>
+  <ID>3</ID>
+  <Name>Тест модуля 1</Name>
+  <Tasks>
+    <Task>
+      <Text>Сложный вопрос</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+        <string>Вариант 3</string>
+        <string>Вариант 4</string>
+      </Answers>
+      <RightAnswer>3</RightAnswer>
+      <Difficult>1</Difficult>
+    </Task>
+    <Task>
+      <Text>Простой вопрос</Text>
+      <Answers>
+        <string>Вариант 1</string>
+        <string>Вариант 2</string>
+      </Answers>
+      <RightAnswer>1</RightAnswer>
+      <Difficult>0.1</Difficult>
+    </Task>
+  </Tasks>
+  <Score>0</Score>
+  <TimeLimit>20</TimeLimit>
+</Test>

@@ -11,49 +11,21 @@ using System.IO;
 
 namespace WcfService1
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
         public Service1()
         {
-            if (tests == null) 
-                tests = XMLWork.ReadXMLTestTheme();
-
-            /*tests[0].Tests[0].Tasks = new List<Task>();
-            for (int i = 0; i < 50; i++)
-            {
-                tests[0].Tests[0].Tasks.Add(new Task() 
-                { 
-                    Answers = new List<string>(){"1","2","3","4"},
-                    Difficult = GaussDistr(),
-                    RightAnswer = (int)(rnd()*4),
-                    Text = "none"
-                });
-            }*/
+            if (testThemes == null)
+                testThemes = XMLWork.ReadTestTheme();
 
             if (studentGroups == null)
-                studentGroups = XMLWork.ReadXMLUserGroup();
+                studentGroups = XMLWork.ReadUserGroup();
+
+            if (admins == null)
+                admins = XMLWork.ReadUsers("admins\\info.xml");
             
-            /*
-            students = new List<User>();
-            for (int i = 0; i < 50; i++)
-            {
-                students.Add(new User() { Name = "Unknown_" + i.ToString() });
-            } 
-            SetStudentKnowledge();
-
-            foreach (User user in students)
-            {
-                testPassage.Add(PassTest(user, tests[0].Tests[0]));
-            }
-
-            irt = new IRTTable(testPassage);
-            PrintIntoFileExcel(irt);
-            PrintPredictFileExcel(irt);*/
-
         }
-        
+
         public bool Login(string username, string pass)
         {
             var user = FindUser(username);
@@ -62,6 +34,18 @@ namespace WcfService1
             if (user.CheckPass(pass))
             {
                 instances.Add(this, username);
+                return true;
+            }
+            return false;
+        }
+
+        public bool LoginAdmin(string username, string pass)
+        {
+            var user = admins.FirstOrDefault(a => a.Name == username);
+            if (user == null)
+                return false;
+            if (user.CheckPass(pass))
+            {
                 return true;
             }
             return false;
@@ -83,24 +67,59 @@ namespace WcfService1
         }
 
         public static Dictionary<Service1, string> instances = new Dictionary<Service1, string>();
-        public static List<TestsTheme> tests = null;
+        public static List<TestsTheme> testThemes = null;
         public static List<UserGroup> studentGroups = null;
+        public static List<User> admins = null;
         public static List<TestPassage> testPassage = new List<TestPassage>();
-        public static List<IRTTable> irt;
- 
+        public static List<IRTTable> irt = new List<IRTTable>();
+
         public List<TestsTheme> GetAllTests()
         {
-            var dc = ServiceSecurityContext.Current;
-            return new List<TestsTheme>(tests); //.Where(message => message.Receiver == dc.PrimaryIdentity.Name || message.Sender == dc.PrimaryIdentity.Name)
+            return testThemes;
+        }
+
+        public List<string> GetThemesNames()
+        {
+            return testThemes.Select(x => x.Name).ToList();
+        }
+
+        public int GetTestsCount(int themeNum)
+        {
+            if (themeNum > testThemes.Count - 1 || themeNum < 0)
+                return 0;
+            return testThemes[themeNum].Tests.Count;
+        }
+
+        public Test GetTest(int themeNum, int testID)
+        {
+            if (themeNum > testThemes.Count - 1 || themeNum < 0)
+                return null;
+            if (testID > testThemes[themeNum].Tests.Count - 1 || testID < 0)
+                return null;
+            return testThemes[themeNum].Tests[testID];
         }
 
         public void SendTestResult(TestPassage message)
         {
             testPassage.Add(message);
-
-            if (testPassage.Count >= 2)
+            if (testPassage.Count >= 1)
             {
-                //irt = new IRTTable(testPassage);
+                for (int j = 0; j < testThemes.Count; j++)
+                {
+                    TestsTheme t = testThemes[j];
+                    for (int i = 0; i < t.Tests.Count; i++)
+                    {
+                        if (t.Tests[i].ID == message.Test.ID)
+                        {
+                            if (t.Tests[i].irt == null)
+                                t.Tests[i].irt = new IRTTable();
+                            t.Tests[i].irt.AddTestPassage(message);
+                        }
+                    }
+                }
+                irt.Add(new IRTTable(testPassage));
+                XMLWork.WriteIRT("irt.xml", irt[0]);
+                XMLWork.WriteTestTheme(testThemes);
                 //PrintIntoFile(irt);
             }
         }
@@ -216,15 +235,13 @@ namespace WcfService1
                 s = string.Format("{0};", i);
                 for (int j = 0; j < irt.taskCount; j++)
                 {
-                    //s += string.Format("{0};", irt.predictTable[i][j]);
-                    s += string.Format("{0:f2};", GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), j));
+                    s += string.Format("{0:f2};", IRTTable.GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), j));
                 }
                 s += irt.table[i].p.ToString() + ";";
                 s += irt.table[i].q.ToString() + ";";
                 s += string.Format("{0:f2};", irt.table[i].pq);
                 s += string.Format("{0:f2};", irt.table[i].teta);
-                //s += string.Format("{0:f2};", GetTeta(irt.betaList, irt.Aj, irt.table[i].val.ToList()));
-                s += string.Format("{0:f2};", GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), irt.taskCount));
+                s += string.Format("{0:f2};", IRTTable.GetTeta2(irt.betaList, irt.Aj, irt.table[i].val.ToList(), irt.taskCount));
                 sw.WriteLine(s);
             }
             s = "w;";
@@ -275,8 +292,8 @@ namespace WcfService1
             for (int i = 0; i < test.Tasks.Count; i++)
             {
                 int right = test.Tasks[i].RightAnswer;
-                double taskP = 0.25+(1 - test.Tasks[i].Difficult);
-                if (rnd() < 0.25+user.knowledge * (taskP)*0.75)
+                double taskP = 0.25 + (1 - test.Tasks[i].Difficult);
+                if (rnd() < 0.25 + user.knowledge * (taskP) * 0.75)
                 {
                     result.Answers.Add(right);
                 }
@@ -317,123 +334,263 @@ namespace WcfService1
             return rand.NextDouble();
         }
 
-        static double FuncDeriv(List<double> beta, List<double> aj, List<double> right, double teta)
-        {
-            double c = 0.25;
-            double res = 0;
-            for (int i = 0; i < beta.Count; i++)
-            {
-                double ch = aj[i] * (1 - c) * (Math.Exp(aj[i] * (beta[i] + teta)));
-                double zn = Math.Pow(c * (Math.Exp(aj[i] * (beta[i] - teta)) + 1), 2);
-                if (right[i] > 0 ? true : false)
-                    res += ch / zn;
-                else
-                    res -= ch / zn;
-            }
-            return res;
-        }
-
-        static double FuncDeriv2(List<double> beta, List<double> aj, List<double> right, double teta)
-        {
-            double c = 0.25;
-            double res = 0;
-            double ch = 0;
-            for (int i = 0; i < beta.Count; i++)
-            {
-                ch += Math.Pow(IRTTable.PredictFormula(teta, beta[i], aj[i], c) - right[i], 2);
-            }
-            res = Math.Sqrt(ch);
-            return res;
-        }
-
-
-        static double FuncResult(List<double> beta, List<double> aj, List<double> right, double teta, int k)
-        {
-            double c = 0.25;
-            double res = 1;
-            for (int i = 0; i < k; i++)//beta.count
-            {
-                if (right[i] > 0)
-                    res *= IRTTable.PredictFormula(teta, beta[i], aj[i], c);
-                else
-                    res *= 1 - IRTTable.PredictFormula(teta, beta[i], aj[i], c);
-            }
-            return res;
-        }
-
-        static double Binary(double a, double b, List<double> beta, List<double> aj, List<double> right)
-        {
-            double x = (a + b) / 2;
-            while (Math.Abs(FuncDeriv2(beta, aj, right, x)) > 0.01)
-            {
-                if (FuncDeriv2(beta, aj, right, x) < 0)
-                    b = x;
-                else
-                    a = x;
-                x = (a + b) / 2;
-            }
-            return x;
-        }
-
-        static double iterative(double a, double b, List<double> beta, List<double> aj, List<double> right)
-        {
-            double x = (a + b) / 2;
-            double step = 0.01;
-            int k = 1;
-            double res = FuncDeriv2(beta, aj, right, x);
-            if (res < FuncDeriv2(beta, aj, right, x + step))
-                k = -1;
-            while (true)
-            {
-                x += k * step;
-                double temp = FuncDeriv2(beta, aj, right, x);
-                if (temp > res)
-                    break;
-                res = temp;
-                if (Math.Abs(x) >= 20)
-                    break;
-            }
-            return x;
-        }
-
-        static double iterative2(double a, double b, List<double> beta, List<double> aj, List<double> right, int count)
-        {
-            double x = (a + b) / 2;
-            double step = 0.01;
-            int k = 1;
-            double res = FuncResult(beta, aj, right, x, count);
-            if (res > FuncResult(beta, aj, right, x + step, count))
-                k = -1;
-            while (true)
-            {
-                x += k * step;
-                double temp = FuncResult(beta, aj, right, x, count);
-                if (temp < res)
-                    break;
-                res = temp;
-                if (Math.Abs(x) >= 20)
-                    break;
-            }
-            return x;
-        }
-
-        public static double GetTeta(List<double> beta, List<double> aj, List<double> right)
-        {
-            return iterative(-10, 10, beta, aj, right);
-        }
-        public static double GetTeta2(List<double> beta, List<double> aj, List<double> right, int count)
-        {
-            return iterative2(-10, 10, beta, aj, right, count);
-        }
-
         public List<UserGroup> GetAllUsers()
         {
             return studentGroups;
         }
 
+        public List<User> GetAdmins()
+        {
+            return admins;
+        }
+
         public IRTTable GetIRT(Test test)
         {
-            return test.GetIRT();
+            return test.irt;
+        }
+
+        public bool AddTestTheme(string testThemeName)
+        {
+            if (testThemes == null)
+            {
+                testThemes = new List<TestsTheme>();
+            }
+            if (testThemes.FirstOrDefault(a => a.Name == testThemeName) != null)
+                return false;
+            testThemes.Add(new TestsTheme() { Name = testThemeName, Tests = new List<Test>() });
+            return true;
+        }
+
+
+        public bool AddTest(string testThemeName, Test test)
+        {
+            TestsTheme t = testThemes.FirstOrDefault(a => a.Name == testThemeName);
+            if (t == null)
+                return false;
+            int testID = testThemes.Max(a => a.Tests.Count > 0 ? a.Tests.Max(b => b.ID) : 0) + 1;
+            test.ID = testID;
+            t.Tests.Add(test);
+            return true;
+        }
+
+
+        public Task GetEmptyTask()
+        {
+            var t = new Task()
+            {
+                Text = "",
+                Answers = new List<string>()
+            };
+
+            for (int i = 0; i < 4; i++)
+            {
+                t.Answers.Add("Вариант " + (i + 1).ToString());
+            }
+            return t;
+        }
+
+        public bool SaveTest(Test test)
+        {
+            for (int j = 0; j < testThemes.Count; j++)
+            {
+                TestsTheme t = testThemes[j];
+                for (int i = 0; i < t.Tests.Count; i++)
+                {
+                    if (t.Tests[i].ID == test.ID)
+                    {
+                        t.Tests[i] = test;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool SaveAll()
+        {
+            try
+            {
+                XMLWork.WriteTestTheme(testThemes);
+                XMLWork.WriteUserGroup(studentGroups);
+                //XMLWork.WriteIRT("irt.xml", irt[0]);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool Rollback()
+        {
+            try
+            {
+                testThemes = XMLWork.ReadTestTheme();
+                studentGroups = XMLWork.ReadUserGroup();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+        public Test TestCopy(Test test)
+        {
+            return test;
+        }
+
+
+        public Task GetTaskAdaptive(TestPassage testPassage, Test test, out double teta)
+        {
+            teta = 0;
+            if (testPassage.Test.Tasks.Count != 0)
+            {
+                teta = IRTTable.GetTeta(testPassage, test);
+                if (teta == 20)
+                    teta = testPassage.Test.Tasks.Count;
+
+                if (testPassage.Test.Tasks.Count >= test.Tasks.Count)
+                    return null;
+
+                if (testPassage.Test.Tasks.Count >= 20)
+                    return null;
+            }
+            int taskNum = -1;
+            var testIRT = test.irt;
+            if (test.irt == null)
+                return null;
+            if (test.irt.betaList == null)
+                return null;
+            for (int i = 0; i < test.Tasks.Count; i++)
+            {
+                bool finded = false;
+                for (int j = 0; j < testPassage.Test.Tasks.Count; j++)
+                {
+                    if (test.Tasks[i].Text == testPassage.Test.Tasks[j].Text)
+                    {
+                        finded = true;
+                        break;
+                    }
+                }
+                if (!finded)
+                    if (taskNum == -1 || Math.Abs(testIRT.betaList[i] - teta) < Math.Abs(testIRT.betaList[i] - testIRT.betaList[taskNum]))
+                        taskNum = i;
+            }
+            if (taskNum == -1)
+                return null;
+            return test.Tasks[taskNum];
+        }
+
+
+        public bool RemoveTest(int testID)
+        {
+            for (int j = 0; j < testThemes.Count; j++)
+            {
+                TestsTheme t = testThemes[j];
+                for (int i = 0; i < t.Tests.Count; i++)
+                {
+                    if (t.Tests[i].ID == testID)
+                    {
+                        XMLWork.RemoveFile(XMLWork.TEST_PATH + "\\" + t.Name + "\\" + t.Tests[i].Name + ".xml");
+                        t.Tests.RemoveAt(i);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
+
+        public bool AddGroup(string groupName)
+        {
+            try
+            {
+                studentGroups.Add(new UserGroup() { Name = groupName, Users = new List<User>() });
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool AddStudent(string groupName, string studentName)
+        {
+            var t = studentGroups.FirstOrDefault(a => a.Name == groupName);
+            if (t == null)
+                return false;
+            int studID = studentGroups.Max(b => b.Users.Count > 0 ? b.Users.Max(c => c.ID) : 0) + 1;
+            try
+            {
+                t.Users.Add(new User() { Name = studentName, ID = studID });
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+        public bool RemoveTestPassage(int testID, List<int> delRows)
+        {
+            for (int j = 0; j < testThemes.Count; j++)
+            {
+                TestsTheme t = testThemes[j];
+                for (int i = 0; i < t.Tests.Count; i++)
+                {
+                    if (t.Tests[i].ID == testID)
+                    {
+                        t.Tests[i].irt.DelTestPassage(delRows);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
+        public bool CheckIRTAdaptive(Test test)
+        {
+            if (test.irt == null)
+                test.irt = GetIRT(test);
+
+            bool enoughTasks = true;
+            bool enoughPass = true;
+
+            if (test.irt.table.Count < (test.Tasks.Count > 25 ? 25 : test.irt.taskCount))
+            {
+                enoughPass = false;
+            }
+            else
+            {
+                int maxPassedTaskNum = 0;
+                if (test.Tasks.Count > 25)
+                {
+                    for (int i = 0; i < test.irt.taskCount; i++)
+                    {
+                        bool b = false;
+                        for (int j = 0; j < test.irt.table[0].val.Length; j++)
+                        {
+                            if (test.irt.table[0].val[j] == 1)
+                            {
+                                b = true;
+                                break;
+                            }
+                        }
+
+                        if (b)
+                            maxPassedTaskNum = i;
+                    }
+                    if (maxPassedTaskNum < 25)
+                        enoughTasks = false;
+                }
+            }
+
+            return enoughTasks && enoughPass;
         }
     }
 

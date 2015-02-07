@@ -10,7 +10,11 @@ namespace WcfService1
 {
     public static class XMLWork
     {
-        public static List<User> ReadXMLUsers(string filename)
+        public const string TEST_PATH = "Тесты";
+        public const string GROUP_PATH = "Группы";
+        public const string DELETED_PATH = "Удаленное";
+
+        public static List<User> ReadUsers(string filename)
         {
             XmlSerializer ser = new XmlSerializer(typeof(List<User>));
             FileStream fs = new FileStream(filename, FileMode.Open);
@@ -19,7 +23,7 @@ namespace WcfService1
             return users;
         }
 
-        public static void WriteXMLUsers(string filename, List<User> users)
+        public static void WriteUsers(string filename, List<User> users)
         {
             XmlSerializer ser = new XmlSerializer(typeof(List<User>));
             TextWriter writer = new StreamWriter(filename);
@@ -27,9 +31,9 @@ namespace WcfService1
             writer.Close();
         }
 
-        public static void WriteXMLTestTheme(List<TestsTheme> themes)
+        public static void WriteTestTheme(List<TestsTheme> themes)
         {
-            string path = "Тесты";
+            string path = TEST_PATH;
             Directory.CreateDirectory(path);
             for (int i = 0; i < themes.Count; i++)
             {
@@ -37,26 +41,26 @@ namespace WcfService1
                 {
                     string s = path + "\\" + themes[i].Name;
                     Directory.CreateDirectory(s);
-                    WriteXMLTest(s + "\\" + themes[i].Tests[j].Name + ".xml", themes[i].Tests[j]);
+                    WriteTest(s + "\\" + themes[i].Tests[j].Name + ".xml", themes[i].Tests[j]);
                 }
             }
         }
 
-        public static void WriteXMLUserGroup(List<UserGroup> groups)
+        public static void WriteUserGroup(List<UserGroup> groups)
         {
-            string path = "Группы";
+            string path = GROUP_PATH;
             Directory.CreateDirectory(path);
             for (int i = 0; i < groups.Count; i++)
             {
                 string s = path + "\\" + groups[i].Name + ".xml";
-                WriteXMLUsers(s, groups[i].Users);
+                WriteUsers(s, groups[i].Users);
             }
         }
-        public static List<UserGroup> ReadXMLUserGroup()
+        public static List<UserGroup> ReadUserGroup()
         {
             List<UserGroup> res = new List<UserGroup>();
 
-            string path = "Группы";
+            string path = GROUP_PATH;
             var groupsDirs = Directory.GetFiles(path);
             for (int i = 0; i < groupsDirs.Count(); i++)
             {
@@ -65,12 +69,12 @@ namespace WcfService1
                     Name = Path.GetFileNameWithoutExtension(groupsDirs[i]),
                     Users = new List<User>()
                 });
-                res[i].Users.AddRange(ReadXMLUsers(groupsDirs[i]));
+                res[i].Users.AddRange(ReadUsers(groupsDirs[i]));
             }
             return res;
         }
 
-        public static void WriteXMLTest(string filename, Test test)
+        public static void WriteTest(string filename, Test test)
         {
             XmlSerializer ser = new XmlSerializer(typeof(Test));
             TextWriter writer = new StreamWriter(filename);
@@ -78,36 +82,58 @@ namespace WcfService1
             writer.Close();
         }
 
-        public static List<TestsTheme> ReadXMLTestTheme()
+        public static List<TestsTheme> ReadTestTheme()
         {
             List<TestsTheme> res = new List<TestsTheme>();
 
-            string path = "Тесты";
+            string path = TEST_PATH;
             var themeDirs = Directory.GetDirectories(path);
             for (int i = 0; i < themeDirs.Count(); i++)
             {
                 res.Add(new TestsTheme()
                 {
-                    Name = themeDirs[i].Substring(path.Length + 1),
+                    Name = Path.GetFileNameWithoutExtension(themeDirs[i]),
                     Tests = new List<Test>()
                 });
 
                 var testDirs = Directory.GetFiles(themeDirs[i]);
                 for (int j = 0; j < testDirs.Count(); j++)
                 {
-                    res[i].Tests.Add(ReadXMLTest(testDirs[j]));
+                    res[i].Tests.Add(ReadTest(testDirs[j]));
                 }
             }
             return res;
         }
 
-        public static Test ReadXMLTest(string filename)
+        public static Test ReadTest(string filename)
         {
             XmlSerializer ser = new XmlSerializer(typeof(Test));
             FileStream fs = new FileStream(filename, FileMode.Open);
             Test test = (Test)ser.Deserialize(fs);
             fs.Close();
             return test;
+        }
+
+        public static void WriteIRT(string filename, IRTTable irt)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(IRTTable));
+            TextWriter writer = new StreamWriter(filename);
+            ser.Serialize(writer, irt);
+            writer.Close();
+        }
+
+        public static IRTTable ReadIRT(string filename)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(IRTTable));
+            FileStream fs = new FileStream(filename, FileMode.Open);
+            IRTTable irt = (IRTTable)ser.Deserialize(fs);
+            fs.Close();
+            return irt;
+        }
+
+        public static void RemoveFile(string filename)
+        {
+            File.Move(filename, DELETED_PATH + "\\" + Path.GetFileName(filename));
         }
     }
 }
